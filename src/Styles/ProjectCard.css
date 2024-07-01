@@ -1,0 +1,65 @@
+.projCard {
+   width: 240px;
+   height: 275px;
+   /* border: 2px rgb(49, 15, 202) solid; */
+
+   margin: 15px;
+   background-size: 240px 275px;
+}
+/* 
+https://codepen.io/t_afif/pen/WNzKJgZ */
+.projCard {
+   --b: 5px; /* border thickness */
+   --s: 30px; /* size of the dashes */
+   --c1: #215a6d;
+   --c2: #92c7a3;
+
+   width: 250px;
+   aspect-ratio: 1;
+   position: relative;
+}
+.projCard::before {
+   content: "";
+   position: absolute;
+   inset: 0;
+   padding: var(--b);
+   background: repeating-conic-gradient(var(--c1) 0 25%, var(--c2) 0 50%) 0 0 /
+      var(--s) var(--s) round;
+   -webkit-mask: linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+   -webkit-mask-composite: xor;
+   mask-composite: exclude;
+   pointer-events: none;
+}
+
+.projCard:hover {
+   opacity: 0.5;
+}
+
+a {
+   text-decoration: none;
+}
+
+a:visited {
+   color: white;
+}
+
+a:hover {
+   opacity: 0.5;
+}
+
+h3 {
+   background-color: lightslategray;
+   opacity: 0.75;
+   color: rgb(49, 15, 202);
+   position: relative;
+   top: 12px;
+}
+
+h4 {
+   font-size: smaller;
+   color: darkgray;
+   background-color: lightslategray;
+   position: relative;
+   top: 150px;
+}

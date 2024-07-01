@@ -1,0 +1,33 @@
+h2 {
+   color: white;
+   font-size: 32px;
+}
+
+#aboutDiv {
+   display: flex;
+   justify-content: space-evenly;
+   position: relative;
+   top: 40px;
+}
+
+#aboutDiv > div > ul {
+   text-align: left;
+   color: White;
+}
+
+#socials {
+   position: relative;
+   top: 60px;
+}
+
+#slideshow {
+   position: relative;
+   bottom: 20px;
+}
+
+@media (max-width: 1070px) {
+   #aboutDiv {
+      flex-direction: column;
+      gap: 2rem;
+   }
+}
